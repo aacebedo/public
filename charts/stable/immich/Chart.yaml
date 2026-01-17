@@ -13,7 +13,7 @@ appVersion: 2.4.1
 dependencies:
   - name: common
     version: 28.29.18
-    repository: oci://oci.trueforge.org/truecharts
+    repository: https://aacebedo.github.io/public
     condition: ""
     alias: ""
     tags: []

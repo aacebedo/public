@@ -27,7 +27,7 @@ storageClassName: {{ . }}
   {{- with $objectData.dataSource -}}
     {{- $sourceName := .name -}}
     {{- if eq .kind "PersistentVolumeClaim" -}}
-      {{- with get $rootCtx.persistence $sourceName -}}
+      {{- with get $rootCtx.Values.persistence $sourceName -}}
         {{- $sourceName := (include "tc.v1.common.lib.storage.pvc.name" (dict "rootCtx" $rootCtx "objectName" $sourceName "objectData" .)) -}}
       {{- end -}}
     {{- end }}
